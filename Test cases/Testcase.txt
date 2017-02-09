@@ -1,0 +1,94 @@
+?- sisters(alice, emily).
+ERROR: toplevel: Undefined procedure: sisters/2 (DWIM could not correct goal)
+2 ?- ['Users/dathuynh/Desktop/condition.pl'].
+ERROR: source_sink `'Users/dathuynh/Desktop/condition.pl'' does not exist
+3 ?- ['/Users/dathuynh/Desktop.condition.pl'].
+ERROR: source_sink `'/Users/dathuynh/Desktop.condition.pl'' does not exist
+4 ?- ['Users/dathuynh/Desktop/likes.pl'].
+ERROR: source_sink `'Users/dathuynh/Desktop/likes.pl'' does not exist
+5 ?- ['/Users/dathuynh/Desktop/likes.pl'].
+true.
+
+6 ?- likes(fred, What).
+What = books .
+
+7 ?- likes(fred, What).
+What = books 
+What = food 
+What = vegetables.
+
+8 ?- hold_party(Who).
+ERROR: toplevel: Undefined procedure: hold_party/1 (DWIM could not correct goal)
+9 ?- ['/Users/dathuynh/Desktop/holdparty.pl'].
+true.
+
+10 ?- hold_party(Who).
+Who = tom 
+Who = alice 
+Who = helen 
+Who = emily.
+
+11 ?- [test].
+ERROR: source_sink `test' does not exist
+12 ?- ['/Users/dathuynh/Desktop/testparent.pl'].
+true.
+
+13 ?- ancestor(john,mary).
+false.
+
+14 ?- ancestor(john,mary).
+false.
+
+15 ?- ancestor(john,paul).
+true .
+
+16 ?- ['/Users/dathuynh/Desktop/testparent.pl'].
+true.
+
+17 ?- ancestor(john,paul).
+true .
+
+18 ?- ['/Users/dathuynh/Desktop/list.pl'].
+true.
+
+19 ?- [test].
+ERROR: source_sink `test' does not exist
+20 ?- p([a,b,c],X,Y).
+X = a,
+Y = [b, c].
+
+21 ?- p([john,likes,apples,X,Y).
+ERROR: Syntax error: Illegal start of term
+ERROR: p([john,likes,apples,X,
+ERROR: ** here **
+ERROR: Y) . 
+21 ?- p([john,likes,apples],X,Y).
+X = john,
+Y = [likes, apples].
+
+22 ?- p([a],X,Y).
+X = a,
+Y = [].
+
+23 ?- p([],X,Y).
+false.
+
+24 ?- ['/Users/dathuynh/Desktop/Condition.pl'].
+true.
+
+25 ?- maleplayers(ronaldo, messi).
+false.
+
+26 ?- maleplayers(ronaldo, messi, bale).
+ERROR: Undefined procedure: maleplayers/3
+ERROR:     However, there are definitions for:
+ERROR:         maleplayers/2
+false.
+
+27 ?- maleplayers(ronaldo, messi).
+false.
+
+28 ?- coaches(ronaldo, messi, bale).
+true.
+
+29 ?- 

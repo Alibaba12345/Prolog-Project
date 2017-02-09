@@ -1,0 +1,1 @@
+test(quicksort(L,X), X, [S]) :- test_sort(L, S).
